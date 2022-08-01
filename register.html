@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Kuala Lumpur city portal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/register.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Saira:wght@600&display=swap" rel="stylesheet">
+    <style>
+        a:link {text-decoration-line: none; color: rgb(150, 0 , 20)}
+        a:visited {text-decoration-line: none; color: rgb(150, 0 ,20)}
+        a:hover {text-decoration-line: none; color: rgb(255, 0 , 0)}
+        a:active {text-decoration-line: none; color: rgb(150, 0 ,20)}
+    </style>  
+</head>
+
+<body>
+    <div class="grid-container">
+    
+    <logo>
+        <img src="/images/logo.png" class="logo" / alt="">
+    </logo>  
+    
+    <header>
+        <ul id="horizontal-list">
+            <li><a href="/index.html">HOME</a></li>
+            <li><a href="/sightseeing.html">SIGHTSEEING</a></li>
+            <li><a href="/login.html">LOGIN</a></li>
+            <input type="checkbox" id="daynighttoggle" onclick="myFunction()">
+        </ul>
+    </header>
+    
+    <nav>
+        <ul class="navigate" id="vertical-list">
+            <li><a href="/index.html">Page 1</a></li>
+            <li><a href="/index.html">Page 2</a></li>
+            <li><a href="/index.html">Page 3</a></li>
+            <li><a href="/index.html">Page 4</a></li>
+            <li><a href="/index.html">Page 5</a></li>
+            <li><a href="/index.html">Page 6</a></li>
+            <li><a href="/index.html">Page 7</a></li>
+            <li><a href="/index.html">Page 8</a></li>
+            <li><a href="/index.html">Page 9</a></li>
+            <li><a href="/index.html">Page 10</a></li>
+        </ul>
+    </nav>
+    
+    <main>    
+    <div class="loginForm">
+      <form action="/html/index.html">
+        <div>
+          <img src="images/user.png" class="userLogo" alt="user" />
+          <h3>NEW CITIZEN REGISTRATION</h3>
+          <label for="email"></label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="enter your email"
+            style="text-align: center"
+            pattern="[A-Za-zd\.]{4-10}"
+          >
+          <label for="create password"></label>
+          <input
+            type="password"
+            id="password"
+            name="crpassword"
+            placeholder="create password"
+            style="text-align: center"
+            title="Password should be 4-10 characters long and can contain only letters/numbers/periods"
+            required
+          />
+            <label for="confirm password"></label>
+          <input
+            type="password"
+            id="password"
+            name="confpassword"
+            placeholder="confirm password"
+            style="text-align: center"
+            title="Password should be 4-10 characters long and can contain only letters/numbers/periods"
+            required
+          />
+          <button id="but" onclick="window.location.href='/loggedin.html'">REGISTER</button>
+        </div>
+      </form>
+    </div>
+    </main>
+   
+    <footer>
+        <div class="socials">
+            <p id="footerP">
+                Copyright &copy; 2022. Kuala Lumpur Governmental Services. All rights reserved.
+            </p>
+            <strong>Follow us on: </strong>
+            <li><a href="https://www.facebook.com">Facebook</a></li>
+            <li><a href="https://www.twitter.com">Twitter</a></li>
+            <li><a href="https://www.instagram.com">Instagram</a></li>
+            <li><a href="https://www.youtube.com">Youtube</a></li>
+        </div>
+    </footer>
+    
+    </div>
+    <script src="js/register.js"></script>
+    </body>
+</html>

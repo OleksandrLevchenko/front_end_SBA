@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Kuala Lumpur city portal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Saira:wght@600&display=swap" rel="stylesheet">
+    <style>
+        a:link {text-decoration-line: none; color: rgb(150, 0 , 20)}
+        a:visited {text-decoration-line: none; color: rgb(150, 0 ,20)}
+        a:hover {text-decoration-line: none; color: rgb(255, 0 , 0)}
+        a:active {text-decoration-line: none; color: rgb(150, 0 ,20)}
+    </style>  
+</head>
+
+<body>
+    <div class="grid-container">
+    
+    <logo>
+        <img src="/images/logo.png" class="logo" / alt="">
+    </logo>  
+    
+    <header>
+        <ul id="horizontal-list">
+            <li><a href="/index.html">HOME</a></li>
+            <li><a href="/sightseeing.html">SIGHTSEEING</a></li>
+            <li><a href="/login.html">LOGIN</a></li>
+            <input type="checkbox" id="daynighttoggle" onclick="myFunction()">
+        </ul>
+    </header>
+    
+    <nav>
+        <ul class="navigate" id="vertical-list">
+            <li><a href="/index.html">Page 1</a></li>
+            <li><a href="/index.html">Page 2</a></li>
+            <li><a href="/index.html">Page 3</a></li>
+            <li><a href="/index.html">Page 4</a></li>
+            <li><a href="/index.html">Page 5</a></li>
+            <li><a href="/index.html">Page 6</a></li>
+            <li><a href="/index.html">Page 7</a></li>
+            <li><a href="/index.html">Page 8</a></li>
+            <li><a href="/index.html">Page 9</a></li>
+            <li><a href="/index.html">Page 10</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <h1 style="text-align:center">WELLCOME TO</h1>
+        <h1 style="text-align:center">KUALA LUMPUR</h1>
+        
+         <table class="table" border="7px" align="center" style="width:100%">
+          <thead>
+            <tr>
+              <th style="width:35%"></th>
+              <th style="width:30%">Metro</th>
+              <th style="width:35%">Federal territory</th>
+            </tr>
+           </thead>
+           <tbody>
+             <tr>
+               <td>Area</td>
+               <td>866.13 sq mi</td>
+               <td>94 sq mi</td>
+             </tr>
+             <tr>
+               <td>Population (2020)</td>
+               <td>7,564,000</td>
+               <td>1,982,112</td>
+             </tr>
+             <tr>
+               <td>Establishment</td>
+               <td>City status - 1 February 1972</td>
+               <td>Transferred to federal jurisdiction - 1 February 1974</td>
+             </tr>
+             <tr>
+             </tr>
+          </tbody>
+        </table>
+        <br>
+        <label for="towns">Twin towns – sister cities:
+            <select name= "town" id="selectTown">
+                <option>Choose sister city to explore</option>
+            </select>
+        </label>
+        
+    </main>
+   
+    <footer>
+        <div class="socials">
+            <p id="footerP">
+                Copyright &copy; 2022. Kuala Lumpur Governmental Services. All rights reserved.
+            </p>
+            <strong>Follow us on: </strong>
+            <li><a href="https://www.facebook.com">Facebook</a></li>
+            <li><a href="https://www.twitter.com">Twitter</a></li>
+            <li><a href="https://www.instagram.com">Instagram</a></li>
+            <li><a href="https://www.youtube.com">Youtube</a></li>
+        </div>
+    </footer>
+    
+    </div>
+    <script src="js/index.js"></script>
+    </body>
+</html>

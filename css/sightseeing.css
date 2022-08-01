@@ -1,0 +1,265 @@
+:root {
+    --base-color: none;
+    --secondary-color: rgba(200, 200, 200, 0.7);
+    --text-color: black;
+    }
+    
+   [data-theme="dark"] {
+    --secondary-color: rgba(0, 0, 0, 0.7);
+    --text-color: white;
+    }
+
+
+body {
+    margin: 10px;
+    background-color: black;
+}
+
+ul {
+    overflow: hidden;
+}
+
+li {
+    display: inline-flex;
+    justify-content: flex-end;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 5fr 2fr;
+    grid-template-rows: 3fr 17fr 2fr;
+    grid-template-areas:
+        "logo header header"
+        "nav main main"
+        "footer footer footer";
+    height: 100vh;
+    grid-gap: 1em;
+    border-radius: 10px;
+}
+.logo {
+    border-radius: 10px;
+    width: 120px;
+    height: auto;
+    display: flex;
+    justify-content: center;     /* DOES NOT WORK */
+    border-radius: 60px;
+    box-shadow: 5px 5px 5px 1px black;
+}
+header {
+    grid-area: header;
+}
+
+
+
+                                        /* DAY-NIGHT BUTTON*/
+input {
+    -webkit-appearance: none;
+    position: relative;
+    width: 80px;
+    height: 40px;
+    background-color: lightgrey;
+    background-size: cover;
+    border-radius: 40px;
+    outline: none;
+    transition: all 1s;
+    box-shadow: 5px 5px 3px 1px black;
+}
+
+input:before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 4px;
+    height: 36px;
+    width: 36px;
+    border-radius: 40px;
+    transition: all 1s;
+    background-color: rgb(200, 0, 20);
+}
+
+input:checked {
+    background-color: rgb(40, 40, 40);
+    transition: background-color 1s;
+}
+
+input:checked:before {
+    transform: translate(100%);
+    transition: all 1s;
+    background-color: rgb(100, 0, 20);
+}
+
+
+
+                                        /*HEADER ITEMS (at the top)*/
+#horizontal-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    margin: 10;
+    padding: 0;
+    color: var(--text-color);
+    font-family: 'Saira', sans-serif;
+    font-size: 40px;
+}
+
+
+
+                                        /*NAV ITEMS (on the left)*/
+#vertical-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    margin: 10;
+    padding: 0;
+    font-family: 'Saira', sans-serif;
+    font-size: 20px;
+    text-decoration-color: orange;
+}
+
+nav {
+    border-radius: 10px;
+    display: flex;
+    align-content: center;
+    background-color: var(--secondary-color);
+    background-blend-mode: lighten;
+}
+news {
+    border-radius: 10px;
+    grid-area: header;
+    background-color: var(--background-color);
+    background-blend-mode: lighten;
+}
+main {
+    border-radius: 10px;
+/*    background-color: var(--secondary-color); */
+    background-blend-mode: darken;
+    justify-content: center;
+    text-align: start;
+    color: var(--text-color);
+    font-family: 'Saira', sans-serif;
+    font-size: 20px;
+}
+
+
+
+
+
+
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 14.28%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+
+
+
+
+footer {
+    border-radius: 10px;
+    grid-area: footer;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    align-items: center;
+}
+
+.socials {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+@media all and (max-width: 600px) {
+    body {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 2fr 8fr 10fr 8fr 2fr;
+        grid-template-areas:
+            "logo"
+            "header"
+            "nav"      
+            "main"
+            "news"
+            "footer";
+    }
+}
